@@ -1,6 +1,4 @@
-const baseUrl = "localhost"
-  ? "http://localhost:9000"
-  : "https://flipkart-rest-server.herokuapp.com";
+const baseUrl = process.env.API || "https://flipkart-backed.herokuapp.com/";
 
 export const api = `${baseUrl}/api`;
 export const generatePublicUrl = (fileName) => {
