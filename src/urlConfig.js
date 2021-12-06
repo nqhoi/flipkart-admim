@@ -1,4 +1,8 @@
-export const api = "http://localhost:9000/api";
+const baseUrl = "localhost"
+  ? "http://localhost:9000"
+  : "https://flipkart-rest-server.herokuapp.com";
+
+export const api = `${baseUrl}/api`;
 export const generatePublicUrl = (fileName) => {
-  return `http://localhost:9000/public/${fileName}`;
+  return `${baseUrl}/public/${fileName}`;
 };
